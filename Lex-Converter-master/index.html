@@ -1,0 +1,31 @@
+<html>
+<head>
+  <!-- By Gavin Monroe-->
+</head>
+<body>
+  <label>Input:</label><br/>
+  <input id="input" type="text" placeholder="mul 5 sub 2 sum 7 2 9"/><button id="work" onClick="doWork();">Compile</button><br/>
+  <label>Output:</label><br/>
+  <input id="outputMath" type="text" placeholder="-80"/><br/>
+  <input id="outputConversion" type="text" placeholder="(5 * (2 -(7 + 2 + 9)))"/><br/>
+</body>
+<footer>
+  <script src="lexConverter.js"></script>
+  <script>
+      //Vars
+      var input = document.getElementById("input");
+      var outputMath = document.getElementById("outputMath");
+      var outputConversion = document.getElementById("outputConversion");
+      
+      //Work that is done
+      function doWork(){
+        if (input.value.length < 5){
+          alert("Input too small!");
+        }else{
+          outputMath.value = math(input.value);
+          outputConversion.value = convert(input.value);
+        }
+      }
+  </script>
+</footer>
+</html>
